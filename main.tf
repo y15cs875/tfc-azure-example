@@ -1,7 +1,3 @@
-locals {
-  change = "trigger a change"
-}
-
 variable "prefix" {
   type        = string
   description = "(Required) Naming prefix for resources."
@@ -21,7 +17,7 @@ variable "location" {
 
 locals {
   base_name = "${var.prefix}web"
-  change = "trigger-08032022"
+  change = "trigger-08033215436"
 }
 
 resource "azurerm_resource_group" "web" {
@@ -42,5 +38,6 @@ resource "azurerm_virtual_network" "web" {
   
   tags = {
     "environment" = var.prefix
+    "change"      = local.change
   }
 }
