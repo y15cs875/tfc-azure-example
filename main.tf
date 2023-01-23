@@ -1,3 +1,7 @@
+locals {
+  change = "trigger a change"
+}
+
 variable "prefix" {
   type        = string
   description = "(Required) Naming prefix for resources."
