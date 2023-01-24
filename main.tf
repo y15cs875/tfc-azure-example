@@ -16,7 +16,7 @@ variable "location" {
 }
 
 locals {
-  base_name = "${var.prefix}web"
+  base_name = "${var.prefix}web123"
   change = "trigger-080332767856"
 }
 
